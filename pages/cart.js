@@ -62,7 +62,6 @@ function CartScreen() {
                           style={{
                             maxWidth: '100%',
                             height: 'auto',
-                            maxWidth: "100%",
                             height: "auto"
                           }}></Image>
                         {item.name}

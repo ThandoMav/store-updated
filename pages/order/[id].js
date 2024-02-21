@@ -227,8 +227,6 @@ function OrderScreen() {
                             width={50}
                             height={50}
                             style={{
-                              maxWidth: '100%',
-                              height: 'auto',
                               maxWidth: "100%",
                               height: "auto"
                             }}></Image>
@@ -246,7 +244,7 @@ function OrderScreen() {
               </table>
             </div>
           </div>
-          <div>
+          <div>S
             <div className="card  p-5">
               <h2 className="mb-2 text-lg">Order Summary</h2>
               <ul>
