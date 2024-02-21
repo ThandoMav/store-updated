@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
 import XCircleIcon from '@heroicons/react/24/outline/XCircleIcon';
@@ -53,7 +53,8 @@ function CartScreen() {
                       <Link
                         href={`/product/${item.slug}`}
                         className="flex items-center"
-                        legacyBehavior>
+                        legacyBehavior
+                      >
                         <Image
                           src={item.image}
                           alt={item.name}
@@ -62,8 +63,8 @@ function CartScreen() {
                           style={{
                             maxWidth: '100%',
                             height: 'auto',
-                            height: "auto"
-                          }}></Image>
+                          }}
+                        ></Image>
                         {item.name}
                       </Link>
                     </td>
