@@ -50,22 +50,17 @@ function CartScreen() {
                 {cartItems.map((item) => (
                   <tr key={item.slug} className="border-b">
                     <td>
-                      <Link
-                        href={`/product/${item.slug}`}
-                        className="flex items-center"
-                        legacyBehavior
-                      >
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={50}
-                          height={50}
-                          style={{
-                            maxWidth: '100%',
-                            height: 'auto',
-                          }}
-                        ></Image>
-                        {item.name}
+                      <Link href={`/product/${item.slug}`}>
+                        <a className="flex items-center">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            width={50}
+                            height={50}
+                          ></Image>
+                          &nbsp;
+                          {item.name}
+                        </a>
                       </Link>
                     </td>
                     <td className="p-5 text-right">
