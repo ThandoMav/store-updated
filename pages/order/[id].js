@@ -1,7 +1,7 @@
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useReducer } from 'react';
@@ -217,20 +217,17 @@ function OrderScreen() {
                   {orderItems.map((item) => (
                     <tr key={item._id} className="border-b">
                       <td>
-                        <Link
-                          href={`/product/${item.slug}`}
-                          className="flex items-center"
-                          legacyBehavior>
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            width={50}
-                            height={50}
-                            style={{
-                              maxWidth: "100%",
-                              height: "auto"
-                            }}></Image>
-                          {item.name}
+                        <Link href={`/product/${item.slug}`}>
+                          <a className="flex items-center">
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={50}
+                              height={50}
+                            ></Image>
+                            &nbsp;
+                            {item.name}
+                          </a>
                         </Link>
                       </td>
                       <td className=" p-5 text-right">{item.quantity}</td>
@@ -244,7 +241,7 @@ function OrderScreen() {
               </table>
             </div>
           </div>
-          <div>S
+          <div>
             <div className="card  p-5">
               <h2 className="mb-2 text-lg">Order Summary</h2>
               <ul>
